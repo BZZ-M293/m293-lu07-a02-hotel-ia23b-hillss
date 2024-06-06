@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Hotelzimmer-Buchungssystem</title>
-
 </head>
 <body>
 
 <h1>Hotelzimmer-Buchungssystem</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="POST">
+  <fieldset>
+    <legend>Zimmertypen</legend>
+    <label for="zimmertyp">Wählen Sie den/die Zimmertyp(en):</label>
+    <select id="zimmertyp" name="zimmertyp[]" multiple>
+      <option value="Einzelzimmer">Einzelzimmer</option>
+      <option value="Doppelzimmer">Doppelzimmer</option>
+      <option value="Suite">Suite</option>
+    </select>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Zusatzleistungen</legend>
+    <label><input type="checkbox" name="zusatzleistungen[]" value="Frühstück"> Frühstück</label><br>
+    <label><input type="checkbox" name="zusatzleistungen[]" value="Flughafentransfer"> Flughafentransfer</label><br>
+    <label><input type="checkbox" name="zusatzleistungen[]" value="Spa-Zugang"> Spa-Zugang</label>
+  </fieldset>
+
+  <button type="submit">Buchen</button>
+</form>
 
 </body>
 </html>
